@@ -1,0 +1,29 @@
+﻿<Window x:Class="HereWeAreAgain.Exchange"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HereWeAreAgain"
+        mc:Ignorable="d"
+        Title="Exchange" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="* * * * * Echange * * * * *" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <GroupBox Header="Livre" Margin="0" Grid.Row="1">
+            <Label Name="TitleLbl" Content="Titre du livre" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </GroupBox>
+        <GroupBox Header="Propriétaire Actuel" Margin="0" Grid.Row="2">
+            <Label Name="OwnerLbl" Content="Nom du Propriétaire Actuel" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </GroupBox>
+        <GroupBox Header="Nouveau Propriétaire" Margin="0" Grid.Row="3">
+            <ComboBox Name="NewOwnerCb" Margin="100,20"/>
+        </GroupBox>
+        <Button x:Name="Valid" Content="Echanger" Margin="5" Grid.Row="4" Click="Valid_Click"/>
+    </Grid>
+</Window>

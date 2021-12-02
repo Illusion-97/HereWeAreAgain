@@ -1,0 +1,29 @@
+﻿<Window x:Class="HereWeAreAgain.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HereWeAreAgain"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox Header="Liste des Livres" Margin="0,0,0,35">
+            <Grid Height="361" VerticalAlignment="Top">
+                <ListView Name="BookList" Margin="5" SizeChanged="ListView_SizeChanged_1" ItemsSource="{Binding}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Titre" DisplayMemberBinding="{Binding Title}" />
+                            <GridViewColumn Header="Auteur" DisplayMemberBinding="{Binding Author}" />
+                            <GridViewColumn Header="Prix" DisplayMemberBinding="{Binding Price}" />
+                            <GridViewColumn Header="Valeur en Points" DisplayMemberBinding="{Binding PointsValue}" />
+                            <GridViewColumn Header="Propriétaire" DisplayMemberBinding="{Binding Owner.Name}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </GroupBox>
+        <Grid Margin="0,384,0,0">
+            <Button x:Name="Exchange" Content="Réaliser un Echange" Margin="5" Click="Exchange_Click"/>
+        </Grid>
+    </Grid>
+</Window>
