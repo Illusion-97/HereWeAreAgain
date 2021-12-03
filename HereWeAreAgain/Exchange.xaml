@@ -14,15 +14,15 @@
             <RowDefinition Height="2*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Content="* * * * * Echange * * * * *" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="* * * * * Echange * * * * *" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Stencil" FontSize="20"/>
         <GroupBox Header="Livre" Margin="0" Grid.Row="1">
-            <Label Name="TitleLbl" Content="Titre du livre" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Name="TitleLbl" Content="Titre du livre" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Wide Latin" FontSize="18"/>
         </GroupBox>
         <GroupBox Header="Propriétaire Actuel" Margin="0" Grid.Row="2">
-            <Label Name="OwnerLbl" Content="Nom du Propriétaire Actuel" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Name="OwnerLbl" Content="Nom du Propriétaire Actuel" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Black" FontSize="14"/>
         </GroupBox>
         <GroupBox Header="Nouveau Propriétaire" Margin="0" Grid.Row="3">
-            <ComboBox Name="NewOwnerCb" Margin="100,20"/>
+            <ComboBox Name="NewOwnerCb" Margin="100,20" FontFamily="Segoe UI Black" FontSize="14"/>
         </GroupBox>
         <Button x:Name="Valid" Content="Echanger" Margin="5" Grid.Row="4" Click="Valid_Click"/>
     </Grid>

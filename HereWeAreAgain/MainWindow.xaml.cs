@@ -36,7 +36,7 @@ namespace HereWeAreAgain
         private void ListView_SizeChanged_1(object sender, SizeChangedEventArgs e)
         {
             GridView _GridView = BookList.View as GridView;
-            var _ActualWidth = BookList.ActualWidth - SystemParameters.VerticalScrollBarWidth;
+            var _ActualWidth = BookList.ActualWidth - SystemParameters.VerticalScrollBarWidth - 15;
             for (int i = 0; i < _GridView.Columns.Count; i++)
             {
                 _GridView.Columns[i].Width = _ActualWidth / _GridView.Columns.Count;
