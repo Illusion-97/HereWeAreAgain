@@ -18,7 +18,7 @@ namespace HereWeAreAgain.Services
 
         public void ValidateExchange(Book b, int newOwner)
         {
-            b.OwnerId = newOwner;
+            b.OwnerId = newOwner; // Utilise l'OwnerId comme tampon pour la mise a jour lors de la persistence
             BookDao.SaveOrUpdate(new BookExchange { CreationDate = DateTime.Now, Book = b, OldOwner = b.Owner });
         }
     }
